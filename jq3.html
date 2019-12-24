@@ -1,0 +1,9 @@
+<img src='chopper-a.jpg' onclick='change()'>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function change() {
+        var screenW = window.innerWidth;
+        var width = Math.random() * screenW + 10;
+        $('img').attr('width', width);
+    }
+</script>

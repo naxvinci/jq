@@ -1,0 +1,20 @@
+<div>
+<img src="luffy-a.jpg" width='100px'>
+<img src="chopper-a.jpg"width='100px'>
+<img src="robin-a.jpg"width='100px'>
+<img src="zoro-a.jpg"width='100px'>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>   //  실행할 명령문   멈춤시간
+    setInterval(function() {
+        $('div').prepend($('img:last'));
+    }, 1000 );
+
+
+//한번만 동작시키는 경우
+// setTimeout(function() {
+//     $('div').prepend($('img:last'));
+// }, 1000);
+
+</script>

@@ -1,0 +1,17 @@
+<h3>내용1</h3>
+<p>내용2</p>
+<ul>
+    <li>아이템1</li>
+    <li>아이템2</li>
+</ul>
+<textarea></textarea>
+<input type='button' value='실행' onclick='run()'>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function run() {
+        console.log($('textarea').val());
+        $('h3').html("<span>내용1 변경</span>");
+        console.log($('p').text());
+        console.log($('li:last').text());
+    }
+</script>

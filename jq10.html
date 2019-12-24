@@ -1,0 +1,17 @@
+선택값 : <span id='result'></span>
+<br>
+<input type="text">@<input type="text">
+<select>
+    <option value='naver.com'>naver </option>
+    <option value='gmail.com'>gmail</option>
+    <option value='hanmail.net'>hanmail</option>
+    <option value=''>직접입력</option>
+</select>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $('select').change(function () {
+        var value = $(this).val();
+        $('input:eq(1)').val(value);
+        $('#result').text(value);
+    });
+</script>

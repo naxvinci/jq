@@ -1,0 +1,59 @@
+<style>
+    td {
+        width: 30px;
+        height: 30px;
+    }
+
+    .select {
+        background-color: gray;
+    }
+</style>
+<table border='1'>
+    <tr>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+    </tr>
+    <tr>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+    </tr>
+    <tr>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+        <td onclick='sel(this)'></td>
+    </tr>
+</table>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function sel(obj) {
+        $(obj).toggleClass('select');
+        var hasSelect = $(obj).is('.select');
+        if (hasSelect) {
+            var nowIdx = $('td').index($(obj));
+            // 가로 확인
+            var start = nowIdx - (nowIdx % 3);
+            var end = start + 3;
+            var count = 0;
+            for (var i = start; i < end; i++) {
+                if ($('td').eq(i).is('.select')) {
+                    count++;
+                }
+            }
+            if (count >= 3) {
+                alert('가로빙고');
+            }
+            start = nowIdx % 3;
+            end = start + 6;
+            count = 0;
+            for(var i = start; i <= end; i += 3) {
+                if($('td').eq(i).is('.select')) {
+                    count++;
+                }
+            }if(count == 3){
+                alert('세로빙고');
+            }
+        }
+    }
+</script>

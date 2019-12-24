@@ -1,0 +1,19 @@
+<div>
+    <h1 onclick='del(this)'>Header1</h1>
+    <h1 onclick='del(this)'>Header2</h1>
+    <h1 onclick='del(this)'>Header3</h1>
+    <h1 onclick='del(this)'>Header4</h1>
+</div>
+<input type='button' value='실행' onclick='run()'>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function run() {
+        $("h1").remove()
+        $("div").empty()
+    }
+
+function del(num) {
+    $(num).remove();
+}
+
+</script>

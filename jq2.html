@@ -1,0 +1,14 @@
+<style>
+    .light {
+        background: yellow
+    }
+</style>
+<h1 class='light' onclick='deleteClass(this)'>item-0</h1>
+<h1 class='light' onclick='deleteClass(this)'>item-1</h1>
+<h1 class='light' onclick='deleteClass(this)'>item-2</h1>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    function deleteClass(element) {
+        $(element).toggleClass('light');
+    }
+</script>

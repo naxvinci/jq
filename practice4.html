@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        function run() {
+            $('.target:nth-child(2)').css('background-color','yellow');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="target">div.target</div>
+    <div class="target">div.target</div>
+    <div class="target">div.target</div>
+    <input type="button" value="run" onclick="run()">
+</body>
+
+</html>
